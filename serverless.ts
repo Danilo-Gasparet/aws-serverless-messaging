@@ -1,18 +1,19 @@
-import type { AWS } from '@serverless/typescript';
+import type { AWS } from "@serverless/typescript";
 
-import message from '@functions/message';
-import { provider } from './serverless-config/provider';
+import message from "@functions/message";
+import { provider } from "./serverless-config/provider";
+import { resources } from "./serverless-config/resources";
 
 const serverlessConfiguration: AWS = {
-  // Service Name
-  service: 'serverless-messaging-aws',
+  // Service Names
+  service: "aws-serverless-messaging",
 
   // Framework version constraint (semver constraint): '3', '^2.33'
-  frameworkVersion: '3',
+  frameworkVersion: "3",
 
   // Plugins extends the Serverless Framework with new features.
   // Serverless plugin to bundle JavaScript and TypeScript lambdas with esbuild - an extremely fast bundler and minifier
-  plugins: ['serverless-esbuild'],
+  plugins: ["serverless-esbuild"],
 
   // Configuring the Cloud provider
   provider: {
@@ -20,20 +21,13 @@ const serverlessConfiguration: AWS = {
   },
 
   // Import the functions
-  functions: { message },
+  functions: {
+    message,
+  },
 
   // Resources for functions to use
-  resources : {
-    Resources: {
-      // Creating the SNS resource topic
-      SNSEvent: {
-        Type: "AWS::SNS::Topic",
-        Properties:{
-          DisplayName: "SNSmessages",
-          TopicName: "incoming-messages",
-        },
-      },
-    },
+  resources: {
+    ...resources,
   },
 
   // Configuration on how to package functions
@@ -45,10 +39,10 @@ const serverlessConfiguration: AWS = {
       bundle: true,
       minify: false,
       sourcemap: true,
-      exclude: ['aws-sdk'],
-      target: 'node14',
-      define: { 'require.resolve': undefined },
-      platform: 'node',
+      exclude: ["aws-sdk"],
+      target: "node14",
+      define: { "require.resolve": undefined },
+      platform: "node",
       concurrency: 10,
     },
   },

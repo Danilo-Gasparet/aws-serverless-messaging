@@ -1,6 +1,6 @@
-import type { AWS } from '@serverless/typescript';
+import type { AWS } from "@serverless/typescript";
 
-export const provider : AWS['provider'] = {
+export const provider: AWS["provider"] = {
   name: "aws",
   stage: "dev",
   region: "eu-west-2",
@@ -13,14 +13,13 @@ export const provider : AWS['provider'] = {
   environment: {
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
     NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
-    topicArn : {"Ref": "SNSEvent",},
-    
+    topicArn: { Ref: "messagingSNS" },
   },
   iamRoleStatements: [
     {
       Action: ["sns:Publish"],
       Effect: "Allow",
-      Resource: {"Ref": "SNSEvent",},
+      Resource: { Ref: "messagingSNS" },
     },
   ],
 };
