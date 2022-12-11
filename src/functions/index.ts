@@ -1,2 +1,2 @@
-export { default as message } from './message';
-
+export { default as eventAPIGateway } from './eventAPIGateway';
+export { default as eventSQS } from './eventSQS';

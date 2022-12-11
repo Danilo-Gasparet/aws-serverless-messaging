@@ -1,0 +1,6 @@
+{
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "{\"number\": \"+393296143196\", \"message\": \"Hello Serverless World\"}"
+}

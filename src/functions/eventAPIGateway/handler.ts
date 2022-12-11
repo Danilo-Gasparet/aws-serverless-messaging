@@ -32,12 +32,11 @@ const publishMessage = async (message: Message) => {
   catch (error) {
     // Catch any errors from SNS
     console.error(error);
-    throw new Error("Fail to publish the message to SNS");
+    throw new Error("Failed to publish the message to SNS using the topic parameter");
   }
 }
 
 const message: ValidatedEventAPIGatewayProxyEvent<typeof inputSchema> = async (event) => {  
-  console.log(` TopicARN -> ${process.env.topicArn}`);
   const identifiableMessage = formatMessage(event.body);
   
   // Publish the message async.
@@ -45,7 +44,7 @@ const message: ValidatedEventAPIGatewayProxyEvent<typeof inputSchema> = async (e
 
   // Return a response to the caller
   return formatJSONResponse({
-    info: 'Your message has been sent successfully',
+    info: 'Your message has been received successfully',
     number: identifiableMessage.number,
     message: identifiableMessage.message,
     event,

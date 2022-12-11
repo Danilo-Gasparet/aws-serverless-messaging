@@ -1,8 +1,10 @@
 import type { AWS } from "@serverless/typescript";
 
-import message from "@functions/message";
 import { provider } from "./serverless-config/provider";
 import { resources } from "./serverless-config/resources";
+
+import eventAPIGateway from "@functions/eventAPIGateway";
+import eventSQS from "@functions/eventSQS";
 
 const serverlessConfiguration: AWS = {
   // Service Names
@@ -13,7 +15,7 @@ const serverlessConfiguration: AWS = {
 
   // Plugins extends the Serverless Framework with new features.
   // Serverless plugin to bundle JavaScript and TypeScript lambdas with esbuild - an extremely fast bundler and minifier
-  plugins: ["serverless-esbuild"],
+  plugins: ["serverless-esbuild", "serverless-iam-roles-per-function"],
 
   // Configuring the Cloud provider
   provider: {
@@ -22,7 +24,8 @@ const serverlessConfiguration: AWS = {
 
   // Import the functions
   functions: {
-    message,
+    eventAPIGateway,
+    eventSQS,
   },
 
   // Resources for functions to use

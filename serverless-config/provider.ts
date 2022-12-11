@@ -15,13 +15,6 @@ export const provider: AWS["provider"] = {
     NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
     topicArn: { Ref: "messagingSNS" },
   },
-  iamRoleStatements: [
-    {
-      Action: ["sns:Publish"],
-      Effect: "Allow",
-      Resource: { Ref: "messagingSNS" },
-    },
-  ],
 };
 
 module.exports = { provider };
