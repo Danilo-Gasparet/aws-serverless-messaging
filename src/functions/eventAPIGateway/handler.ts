@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 import { SNS } from "aws-sdk";
 
 // Receiving the input (http body) and adding an unique ID to it
-const formatMessage = (messageInput: MessageInput): Message => {
+export const formatMessage = (messageInput: MessageInput): Message => {
   return {
     id: uuid(),
     ...messageInput,
