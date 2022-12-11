@@ -12,4 +12,5 @@
 
 + #### Priority 2
     - Read up and learn more about middy so that I can add more validation and error handling
+    - Manage messages sent to the DLQ ( Send a notification, attempt to retry again after a longer period, attempt to format body etc..)
     - Add user authentication to APIs
