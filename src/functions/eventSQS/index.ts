@@ -9,7 +9,7 @@ export default {
           "Fn::GetAtt": ["messagingSQS", "Arn"],
         },
         batchSize: 1,
-        // Optionally you could add a filter here to reduce lambda processing
+        // Optionally I could add a filter here to reduce lambda processing
       },
     },
   ],
