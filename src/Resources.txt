@@ -1,0 +1,91 @@
+================================= AWS ===============================
+- Lambda Developer Guide
+https://docs.aws.amazon.com/lambda/latest/dg/with-sqs-create-package.html
+
+-  SNS Developer Guide
+https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html
+
+- SNS API 
+https://docs.aws.amazon.com/sns/latest/api/API_Publish.html
+
+- SQS Developer Guide 
+https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/create-queue-cloudformation.html
+
+- Cloud Formation Guide 
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/gettingstarted.templatebasics.html
+
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html
+
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html
+
+- Cloud Formation Ref and getAttr Cheat Sheets
+https://theburningmonk.com/cloudformation-ref-and-getatt-cheatsheet/
+
+ ================================ Serverless =============================
+- YML Reference 
+https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml#general-settings
+
+- https://www.serverless.com/blog/aws-lambda-sqs-serverless-integration/#batch-size-and-error-handling-with-the-sqs-integration
+
+- API Gateway Service Proxy
+https://www.serverless.com/plugins/serverless-apigateway-service-proxy#sns
+
+https://github.com/serverless-operations/serverless-apigateway-service-proxy
+
+- Serverless SNSSQSLambda
+https://www.serverless.com/plugins/serverless-sns-sqs-lambda
+
+============================ GENERAL ================================
+
+- Gateway to Lambda to SNS 
+https://medium.com/ovrsea/building-a-serverless-event-driven-application-with-sns-and-node-js-ab0240616982
+
+- Subscribe SQS to SNS
+https://github.com/serverless/serverless/issues/5701
+
+- SQS to SNS ( Important )
+https://carova.io/snippets/serverless-aws-sqs-queue-subscribed-to-sns-topic
+
+- Consume SQS with Lambda
+https://dev.to/aws-builders/consuming-sqs-messages-with-lambdatypescript-1gck
+
+- Depends On
+https://stackoverflow.com/questions/57167856/how-do-you-dependson-a-lambda-function-from-a-cfn-resource
+
+- ARN and Env Variables help
+https://forum.serverless.com/t/reference-aws-arn-in-serverless-ts-file/12192
+
+https://www.richdevelops.dev/blog/using-environment-variables-with-the-serverless-framework
+
+https://www.serverless.com/framework/docs/providers/aws/guide/variables
+
+- General Guide 
+https://blog.logrocket.com/building-serverless-app-typescript/
+
+============================= YOUTUBE ===============================
+- Serverless Intro
+https://www.youtube.com/watch?v=dMVfqCTzuwk&t=47s&ab_channel=Serverless
+
+- Serverless TS, Lambda, DynamoDB
+https://www.youtube.com/watch?v=yEJW4V7ddEQ&t=187s&ab_channel=TomaszTarnowski
+
+- Serverless TS Gateway, Lambda, SNS
+https://www.youtube.com/watch?v=ktTPCJx7F1Q&t=356s&ab_channel=LeoRoese
+
+- Send SMS ( Important !)
+https://www.youtube.com/watch?v=nesgdN0XINQ&ab_channel=CompleteCoding
+
+
+========================== NEW IMPORTANT ==============================
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/sns-examples-sending-sms.html
+
+https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SNS.html
+
+https://docs.aws.amazon.com/lambda/latest/dg/nodejs-exceptions.html
+
+https://levelup.gitconnected.com/unit-test-and-integration-test-for-aws-lambda-nodejs-in-typescript-2235a0f69f5
+
+https://kalinchernev.github.io/tdd-serverless-jest
+
+
+https://dev.to/tastefulelk/production-ready-typescript-serverless-project-configuration-mn9
